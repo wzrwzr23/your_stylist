@@ -1,27 +1,10 @@
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
-/*const uri = "mongodb+srv://yuehengggg:1004866wyh1103A@stylist.59vtveq.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
-const { MongoClient } = require("mongodb");
-*/
- 
-// Replace the following with your Atlas connection string                                                                                                                                        
-const url = "mongodb://yuehengggg:1004866wyh1103A@ac-dtwqfjg-shard-00-00.59vtveq.mongodb.net:27017,ac-dtwqfjg-shard-00-01.59vtveq.mongodb.net:27017,ac-dtwqfjg-shard-00-02.59vtveq.mongodb.net:27017/?ssl=true&replicaSet=atlas-otyugf-shard-0&authSource=admin&retryWrites=true&w=majority";
-const client = new MongoClient(url);
-async function run() {
-    try {
-        await client.connect();
-        console.log("Connected correctly to server");
-    } catch (err) {
-        console.log(err.stack);
-    }
-    finally {
-        await client.close();
-    }
-}
-run().catch(console.dir);
+require("./db/config");
+const express = require("express");
+const app = express();
+
+const cors = require("cors");
+
+
+app.use(express.json());
+app.use(cors());
