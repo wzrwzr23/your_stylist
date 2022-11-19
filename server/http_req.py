@@ -48,7 +48,7 @@ def http_post_prod(param): # get info of one product
         "summary":
         {
             "codes":code
-        },
+        }
     }
     requestData = json.dumps(requestData)
     head = {'Content-Type': 'application/json; charset=UTF-8'}
@@ -69,17 +69,20 @@ def process_data(prod_info):
     info["max_price"] = price["max"]["price"]["amount"]
     info["max_currency"] = price["max"]["price"]["currency"]
 
-    option = prod_info["option"]["stocks"] # list
-    option_count = len(option)
-    info["option"] = []
-    for i in range(option_count):
-        option_info = {}
-        option_info_ori = option[i]
-        option_info["name"] = option_info_ori["names"]
-        option_info["price"] = option_info_ori["price"]["amount"]
-        option_info["currency"] = option_info_ori["price"]["currency"]
-        option_info["quantity"] = int(option_info_ori["quantity"])
-        info["option"].append(option_info)
+    if prod_info["option"] != None:
+        option = prod_info["option"]["stocks"] # list
+        option_count = len(option)
+        info["option"] = []
+        for i in range(option_count):
+            option_info = {}
+            option_info_ori = option[i]
+            option_info["name"] = option_info_ori["names"]
+            option_info["price"] = option_info_ori["price"]["amount"]
+            option_info["currency"] = option_info_ori["price"]["currency"]
+            option_info["quantity"] = int(option_info_ori["quantity"])
+            info["option"].append(option_info)
+    else:
+        info["option"] = None
     
     info["img"] = []
     info["description"] = []
@@ -104,6 +107,12 @@ def process_data(prod_info):
 #mydb = myclient["mydatabase"]
 #mycol = mydb["customers"]
 
+import pymongo
+
+myclient = pymongo.MongoClient("mongodb+srv://yuehengggg:1004866wyh1103A@stylist.59vtveq.mongodb.net/?retryWrites=true&w=majority")
+mydb = myclient["Application"]
+mycol = mydb["Clothes"]
+
 path = "F:\Korea 500\your_styliest\server\women.csv"
 df = pd.read_csv(path)
 cate_lst = df["code"].to_numpy()
@@ -115,12 +124,15 @@ for i in cate_lst:
         # prod_info = cate_sum[i] # dict
         # print(prod_info)
         code = cate_sum[i]["code"]
+        # print(code)
         prod_info_all = http_post_prod(code)
         if prod_info_all["products"] != []:
             prod_info = process_data(prod_info_all["products"][0])
             # todo
             # send data to mangodb
-            print(prod_info)
+            if prod_info !=[]:
+
+                x = mycol.insert_one(prod_info)
             
 
             

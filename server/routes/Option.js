@@ -1,7 +1,6 @@
 require("../db/config");
 const express = require("express");
-const ItemInfo = require("../db/ItemInfo");
-const creditReq = require("../db/ItemInfo");
+const creditReq = require("../db/Option");
 const router = express.Router();
 
 router.post("/", async (re, rs) => {
@@ -10,11 +9,13 @@ router.post("/", async (re, rs) => {
   rs.send(rl);
 });
 
+//var router = express.Router();
+   
 router.get("/", (req, res) => {
-    ItemInfo.find({}, (err, result) => {
+    Option.find({}, (err, result) => {
         if (err) console.log(err);
         else {
-            console.log("Getting Information...")
+            console.log("Get Option...")
             res.json(result)
         }
     })
@@ -22,5 +23,4 @@ router.get("/", (req, res) => {
 
  
 app.use(router);
-
 module.exports = router;
