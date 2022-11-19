@@ -28,8 +28,12 @@ mongoose
   const client = new MongoClient(url);
   async function run() {
       try {
-          await client.connect();
-          console.log("Connected correctly to server");
+            await client.connect();
+            console.log("Connected correctly to server");
+          
+            const db = client.db("Application");
+            const coll = db.collection("Clothes");  
+            
       } catch (err) {
           console.log(err.stack);
       }
