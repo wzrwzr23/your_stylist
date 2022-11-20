@@ -4,14 +4,39 @@ const express = require("express");
 const app = express();
 
 const cors = require("cors");
-const ItemInfo = require("./db/Women");
+//const ItemInfo = require("./db/Women");
+const Women = require("./routes/Women");
+const Men = require("./routes/Men");
+const WishList = require("./routes/WishList");
 
+//const config=require("server/config");
+
+//const expressLayouts = require('express-ejs-layouts');
 
 app.use(express.json());
-app.use(cors({
-    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
-}))
+app.use(cors())
 
-app.use("/SendItemInfo", ItemInfo);
+//app.set('view engine', 'ejs');
+//app.use(expressLayouts);
+
+app.use("/WomenInfo",Women);
+app.use("/MenInfo", Men);
+app.use("/WishListInfo", WishList);
+
+
+
+app.listen(3000, () => {
+    console.log("Server is listening");
+  });
+
+
+/*app.get('/', function (req, res) {
+    res.render('home', {});
+  });*/
+
+
+
+
+
 
 
