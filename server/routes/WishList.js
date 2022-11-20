@@ -1,17 +1,17 @@
 require("../db/config");
 const express = require("express");
-const ItemInfo = require("../db/ItemInfo");
-const creditReq = require("../db/ItemInfo");
+const WishList = require("../db/WishList");
+
 const router = express.Router();
 
 router.post("/", async (re, rs) => {
-  let rt = new ItemInfo(re.body);
+  let rt = new WishList(re.body);
   let rl = await rt.save();
   rs.send(rl);
 });
 
 router.get("/", (req, res) => {
-    ItemInfo.find({}, (err, result) => {
+    WishList.find({}, (err, result) => {
         if (err) console.log(err);
         else {
             console.log("Getting Information...")

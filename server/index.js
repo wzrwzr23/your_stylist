@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 
 const cors = require("cors");
-const ItemInfo = require("./db/ItemInfo");
+const ItemInfo = require("./db/Women");
 
 
 app.use(express.json());

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const ItemInfo = new mongoose.Schema({
+const Women = new mongoose.Schema({
   name: String,
   price: Number,
   min_price: Number,
@@ -8,8 +8,8 @@ const ItemInfo = new mongoose.Schema({
   max_price: Number,
   max_currency: String,
   option: Array,
-  img: String,
-  description: String,
+  img: Array,
+  description: Array,
 });
 
-module.exports = mongoose.model("ItemInfo", ItemInfo);
+module.exports = mongoose.model("Women", Women);
