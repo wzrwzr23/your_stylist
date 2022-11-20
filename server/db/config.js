@@ -31,9 +31,9 @@ mongoose
             await client.connect();
             console.log("Connected correctly to server");
           
-            const db = client.db("Application");
-            const coll = db.collection("Clothes");  
-            
+            const db = client.db("Women");
+            //const coll = db.collection("Clothes");  
+
       } catch (err) {
           console.log(err.stack);
       }
