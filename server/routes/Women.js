@@ -4,6 +4,19 @@ const Women = require("../db/Women");
 
 const router = express.Router();
 
+//const app = express();
+
+// app.get("/", (req, res) => {
+//     Women.find({}, (err, result) => {
+//         if (err) console.log(err);
+//         else {
+//             console.log("Getting Information...")
+//             // res.json(result)
+//             res.send(result)
+//         }
+//     })
+// })
+
 router.post("/", async (re, rs) => {
   let rt = new Women(re.body);
   let rl = await rt.save();
@@ -16,11 +29,17 @@ router.get("/", (req, res) => {
         else {
             console.log("Getting Information...")
             res.json(result)
+            res.send(result)
         }
     })
 })
 
  
-app.use(router);
+// app.listen(8000, () => {
+//     console.log("Server Woman is listening");
+//   });
 
-module.exports = router;
+
+
+
+ module.exports = router;

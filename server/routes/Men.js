@@ -21,6 +21,6 @@ router.get("/", (req, res) => {
 })
 
  
-app.use(router);
+//app.use(router);
 
 module.exports = router;
