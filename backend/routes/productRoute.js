@@ -89,9 +89,13 @@ router.delete('/:id', isAuth, isAdmin, async (req, res) => {
 router.post('/', isAuth, isAdmin, async (req, res) => {
   const product = new Product({
     name: req.body.name,
-    price: req.body.price,
+    minprice: req.body.minprice,
+    maxprice: req.body.maxprice,
+    addr: req.body.addr,
+    optionn: req.body.optionn,
     image: req.body.image,
     brand: req.body.brand,
+    currency: req.body.currency,
     category: req.body.category,
     countInStock: req.body.countInStock,
     description: req.body.description,

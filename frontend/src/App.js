@@ -60,7 +60,31 @@ function App() {
           </button>
           <ul className="categories">
             <li>
-              <Link to="/category/Pants">Pants</Link>
+              <Link>Women</Link>
+            </li>
+
+            <li>
+              <Link to="/category/Rompers">Rompers</Link>
+            </li>
+
+            <li>
+              <Link to="/category/PantsCapris">Pants & Capris</Link>
+            </li>
+
+            <li>
+              <Link>Dress</Link>
+            </li>
+
+            <li>
+              <Link to="/category/SleevelessDress">---- Sleeveless Dress</Link>
+            </li>
+
+            <li>
+              <Link to="/category/Long-SleeveDress">---- Long-Sleeve Dress</Link>
+            </li>
+
+            <li>
+              <Link to="/category/Short-SleeveDress">---- Short-Sleeve Dress</Link>
             </li>
 
             <li>
