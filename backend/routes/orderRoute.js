@@ -4,16 +4,16 @@ import { isAuth, isAdmin } from '../util';
 
 const router = express.Router();
 
-router.get("/", isAuth, async (req, res) => {
+router.get("/", async (req, res) => {
   const orders = await Order.find({}).populate('user');
   res.send(orders);
 });
-router.get("/mine", isAuth, async (req, res) => {
+router.get("/mine", async (req, res) => {
   const orders = await Order.find({ user: req.user._id });
   res.send(orders);
 });
 
-router.get("/:id", isAuth, async (req, res) => {
+router.get("/:id", async (req, res) => {
   const order = await Order.findOne({ _id: req.params.id });
   if (order) {
     res.send(order);
@@ -22,7 +22,7 @@ router.get("/:id", isAuth, async (req, res) => {
   }
 });
 
-router.delete("/:id", isAuth, isAdmin, async (req, res) => {
+router.delete("/:id", async (req, res) => {
   const order = await Order.findOne({ _id: req.params.id });
   if (order) {
     const deletedOrder = await order.remove();
@@ -32,7 +32,7 @@ router.delete("/:id", isAuth, isAdmin, async (req, res) => {
   }
 });
 
-router.post("/", isAuth, async (req, res) => {
+router.post("/", async (req, res) => {
   const newOrder = new Order({
     orderItems: req.body.orderItems,
     user: req.user._id,
@@ -47,7 +47,7 @@ router.post("/", isAuth, async (req, res) => {
   res.status(201).send({ message: "New Order Created", data: newOrderCreated });
 });
 
-router.put("/:id/pay", isAuth, async (req, res) => {
+router.put("/:id/pay", async (req, res) => {
   const order = await Order.findById(req.params.id);
   if (order) {
     order.isPaid = true;

@@ -11,7 +11,7 @@ function ProductScreen(props) {
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState('');
 
-  // const [opp, setOpp] = useState([])
+  const [opp, setOpp] = useState(false);
 
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
@@ -22,7 +22,7 @@ function ProductScreen(props) {
   const { success: productSaveSuccess } = productReviewSave;
   const dispatch = useDispatch();
 
-  useEffect(() => {
+  useEffect(async () => {
     if (productSaveSuccess) {
       alert('Review submitted successfully.');
       setRating(0);
@@ -31,11 +31,22 @@ function ProductScreen(props) {
     }
     dispatch(detailsProduct(props.match.params.id));
     // setOpp(product.option)
-    console.log(product.optionn);
+    // await wait();
+    // while (loading | error){
+    //   console.log(1);
+    //   console.log(product.name);
+    // }
+    // console.log(2);
+    // console.log(product.name);
+    // console.log("success");
     return () => {
       //
     };
   }, [productSaveSuccess]);
+
+  const wait = async () => {
+    setOpp(product.optionn);
+  }
   const submitHandler = (e) => {
     e.preventDefault();
     // dispatch actions
@@ -47,6 +58,11 @@ function ProductScreen(props) {
       })
     );
   };
+  const show = ()=>{
+    console.log(product.optionn);
+    console.log(1);
+    setOpp(true);
+  }
   const handleAddToCart = () => {
     console.log(product.optionn);
     // product.option.map((item)=>{
@@ -75,6 +91,16 @@ function ProductScreen(props) {
       ) : (
         <>
           <div className="details">
+            <button onClick={show}>Show options</button>
+            {opp ?  (
+              <div>
+                {product.optionn.map(item =>
+                  <div>{item.name}</div>
+                )}
+              </div>
+            ):(
+              <p>loading</p>
+            )}
             <div className="details-image">
               <img src={product.image} alt="product"></img>
             </div>
@@ -107,7 +133,7 @@ function ProductScreen(props) {
               <button onClick={handleAddToCart}>hhh</button>
               <ul>
 
-                {product.optionn.map(item => <div>{item.name}</div>)}
+                {/* {product.optionn.map(item => <div>{item.name}</div>)} */}
                 {/* <p>{product.optionn[0].name}</p> */}
                 <li>Price: {product.minprice}{product.currency} ~ {product.maxprice}{product.currency}</li>
                 <li>Currency: {product.currency}</li>

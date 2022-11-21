@@ -33,7 +33,7 @@ router.get('/:id', async (req, res) => {
     res.status(404).send({ message: 'Product Not Found.' });
   }
 });
-router.post('/:id/reviews', isAuth, async (req, res) => {
+router.post('/:id/reviews', async (req, res) => {
   const product = await Product.findById(req.params.id);
   if (product) {
     const review = {
@@ -55,7 +55,7 @@ router.post('/:id/reviews', isAuth, async (req, res) => {
     res.status(404).send({ message: 'Product Not Found' });
   }
 });
-router.put('/:id', isAuth, isAdmin, async (req, res) => {
+router.put('/:id', async (req, res) => {
   const productId = req.params.id;
   const product = await Product.findById(productId);
   if (product) {
@@ -76,7 +76,7 @@ router.put('/:id', isAuth, isAdmin, async (req, res) => {
   return res.status(500).send({ message: ' Error in Updating Product.' });
 });
 
-router.delete('/:id', isAuth, isAdmin, async (req, res) => {
+router.delete('/:id', async (req, res) => {
   const deletedProduct = await Product.findById(req.params.id);
   if (deletedProduct) {
     await deletedProduct.remove();
@@ -86,7 +86,7 @@ router.delete('/:id', isAuth, isAdmin, async (req, res) => {
   }
 });
 
-router.post('/', isAuth, isAdmin, async (req, res) => {
+router.post('/', async (req, res) => {
   const product = new Product({
     name: req.body.name,
     minprice: req.body.minprice,
