@@ -49,7 +49,48 @@ function App() {
             x
           </button>
           <ul className="categories">
-            <li>
+            {
+            <><li>
+                <Link to="/category/PencilJeans">Pencil Jeans</Link>
+              </li>
+
+              <li>
+                  <Link to="/category/PencilSkirt">Pencil Skirt </Link>
+              </li>
+
+              <li>
+                  <Link to="/category/Asymmetricalskirt">Asymmetrical skirt </Link>
+              </li>
+
+              <li>
+                  <Link to="/category/StraightSkirt">Straight Skirt </Link>
+              </li>    
+
+              <li>
+                  <Link to="/category/Rompers">Rompers </Link>
+              </li>    
+
+              <li>
+                  <Link to="/category/Pleatedskirt">Pleated skirt </Link>
+              </li> 
+
+              <li>
+                  <Link to="/category/Long-SleeveDress">Long-Sleeve Dress </Link>
+              </li>               
+
+              <li>
+                  <Link to="/category/Half-SleeveDress">Half-Sleeve Dress </Link>
+              </li>   
+
+              <li>
+                  <Link to="/category/Budskirt">Bud skirt </Link>
+              </li>  
+
+              <li>
+                  <Link to="/category/BallGownskirt">Ball Gown skirt </Link>
+              </li>  
+              </>           
+            /* <li>
               <Link>Women</Link>
             </li>
 
@@ -79,7 +120,8 @@ function App() {
 
             <li>
               <Link to="/category/Shirts">Shirts</Link>
-            </li>
+            </li> */
+            }
           </ul>
         </aside>
         <main className="main">
