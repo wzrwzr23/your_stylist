@@ -121,8 +121,8 @@ function HomeScreen(props) {
     //   );
     // }
     // e.preventDefault();
-    const totaldata= [Asymmetricalskirt,BallGownskirt,Budskirt,HalfSleeveDress,LongSleeveDress,PencilJeans,PencilSkirt,Pleatedskirt,Rompers,StraightSkirt]
-    const totaldataname= ["Asymmetricalskirt","BallGownskirt","Budskirt","HalfSleeveDress","LongSleeveDress","PencilJeans","PencilSkirt","Pleatedskirt","Rompers","StraightSkirt"]
+    const totaldata= [Budskirt,HalfSleeveDress,LongSleeveDress,PencilJeans,PencilSkirt,Pleatedskirt,Rompers,StraightSkirt]
+    const totaldataname= ["Budskirt","HalfSleeveDress","LongSleeveDress","PencilJeans","PencilSkirt","Pleatedskirt","Rompers","StraightSkirt"]
 
     for (let c = 0;c<totaldata.length;c++){
 
@@ -139,6 +139,9 @@ function HomeScreen(props) {
           des = "no description"
         }
         if (d["option"]==null){
+          continue;
+        }
+        if (d["img"]==[] | null){
           continue;
         }
         dispatch(
