@@ -11,8 +11,9 @@ function ProductScreen(props) {
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState('');
 
-  const [opp, setOpp] = useState(false);
+  const [opp, setOpp] = useState();
   const [oppnull, setOppnull] = useState(false);
+  const [str, setStr] = useState("");
 
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
@@ -70,6 +71,7 @@ function ProductScreen(props) {
       }
     }else{
       setOpp(false);
+      setStr("No options.");
     }
   }
   const handleAddToCart = () => {
@@ -201,7 +203,7 @@ function ProductScreen(props) {
                   }
                 </div>
               ):(
-                <p>No options.</p>
+                <p>{str}</p>
               )
             }
           </div>
