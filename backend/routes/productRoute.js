@@ -109,6 +109,18 @@ router.post('/', async (req, res) => {
       .send({ message: 'New Product Created', data: newProduct });
   }
   return res.status(500).send({ message: ' Error in Creating Product.' });
+  // const match = await Product.findOne({ name: req.body.name });
+  // if (match) {
+  //   return res.status(500).send({ message: ' Error in Creating Product.' });
+  //
+  // } else {
+  //   const newProduct = await product.save();
+  //   if (newProduct) {
+  //     return res
+  //       .status(201)
+  //       .send({ message: 'New Product Created', data: newProduct });
+  //   }
+  // }
 });
 
 export default router;

@@ -67,23 +67,26 @@ function ProductsScreen(props) {
     setCurrency("SGD");
   };
   const submitHandler = (e) => {
-    // e.preventDefault();
-    // for (let i=0;i<1;i++) {
-    //   dispatch(
-    //     saveProduct({
-    //       _id: id,
-    //       name: "name3",
-    //       price: parseInt(data[0]["min_price"]),
-    //       image: data[0]["img"][0],
-    //       brand,
-    //       category,
-    //       countInStock,
-    //       description: data[0]["description"],
-    //       currency,
-    //     })
-    //   );
-    // }
     e.preventDefault();
+
+    // dispatch(
+    //   saveProduct({
+    //     _id: id,
+    //     name: "name6",
+    //     minprice: 3,
+    //     maxprice: 5,
+    //     image,
+    //     brand: "NO",
+    //     category:'PantsCapris',
+    //     countInStock:2,
+    //     description:"eee",
+    //     currency: "KRW",
+    //     optionn: [],
+    //     addr: "",
+    //   })
+    // );
+
+    // e.preventDefault();
     for (let i=0;i<data.length;i++){
       let d = data[i];
       let des = "";
