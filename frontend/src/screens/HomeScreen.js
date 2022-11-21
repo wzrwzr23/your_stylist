@@ -4,7 +4,17 @@ import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts, saveProduct } from '../actions/productActions';
 import Rating from '../components/Rating';
-import testdata from './localdata.js';
+//import testdata from './localdata.js';
+import Asymmetricalskirt from './data/Asymmetrical skirt';
+import BallGownskirt from './data/Ball Gown skirt';
+import Budskirt from './data/Bud skirt';
+import HalfSleeveDress from './data/Half-Sleeve Dress';
+import LongSleeveDress from './data/Long-Sleeve Dress';
+import PencilJeans from './data/Pencil Jeans';
+import PencilSkirt from './data/Pencil Skirt';
+import Pleatedskirt from './data/Pleated skirt';
+import Rompers from './data/Rompers ';
+import StraightSkirt from './data/Straight Skirt';
 
 // const da = [{
 //   "name": "ZGCINE ZG-V160 V 마운트 배터리 V-잠금 리튬 배터리 유형-C USB 마이크로 포켓 배터리 카메라 스마트 폰 노트북",
@@ -111,38 +121,46 @@ function HomeScreen(props) {
     //   );
     // }
     // e.preventDefault();
-    for (let i=0;i<testdata.length;i++){
-      let d = testdata[i];
-      let des = "";
-      if (d["description"].length != 0){
-        for (let j=0;j<d["description"].length;j++){
-          des=des+d["description"][j]
+    const totaldata= [Asymmetricalskirt,BallGownskirt,Budskirt,HalfSleeveDress,LongSleeveDress,PencilJeans,PencilSkirt,Pleatedskirt,Rompers,StraightSkirt]
+    const totaldataname= ["Asymmetricalskirt","BallGownskirt","Budskirt","HalfSleeveDress","LongSleeveDress","PencilJeans","PencilSkirt","Pleatedskirt","Rompers","StraightSkirt"]
+
+    for (let c = 0;c<totaldata.length;c++){
+
+    
+      const testdata=totaldata[c];
+      for (let i=0;i<testdata.length;i++){
+        let d = testdata[i];
+        let des = "";
+        if (d["description"].length != 0){
+          for (let j=0;j<d["description"].length;j++){
+            des=des+d["description"][j]
+          }
+        }else{
+          des = "no description"
         }
-      }else{
-        des = "no description"
+        if (d["option"]==null){
+          continue;
+        }
+        dispatch(
+          saveProduct({
+            _id: id,
+            name: d['name'],
+            minprice: parseInt(d["min_price"]),
+            maxprice: parseInt(d["max_price"]),
+            image: d["img"][0],
+            brand: "no",
+            category:totaldataname[c],
+            countInStock:1,
+            description: des,
+            currency: d["min_currency"],
+            optionn: d["option"],
+            addr: d["addr"]
+          })
+        );
       }
-      if (d["option"]==null){
-        continue;
-      }
-      dispatch(
-        saveProduct({
-          _id: id,
-          name: d['name'],
-          minprice: parseInt(d["min_price"]),
-          maxprice: parseInt(d["max_price"]),
-          image: d["img"][0],
-          brand: "no",
-          category:"Rompers",
-          countInStock:1,
-          description: des,
-          currency: d["min_currency"],
-          optionn: d["option"],
-          addr: d["addr"]
-        })
-      );
-    }
-    return 0;
-  };
+      return 0;
+    };
+  }
 
   return (
     <>
