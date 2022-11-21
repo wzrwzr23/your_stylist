@@ -28,7 +28,7 @@ button {
 }
 .header {
   grid-area: header;
-  background-color: #203040;
+  background-color: #a6d6ac;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -54,7 +54,7 @@ button {
 }
 .footer {
   grid-area: footer;
-  background-color: #203040;
+  background-color: #a6d6ac;
   color: #ffffff;
   display: flex;
   justify-content: center;
