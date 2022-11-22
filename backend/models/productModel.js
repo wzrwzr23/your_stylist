@@ -12,12 +12,12 @@ const reviewSchema = new mongoose.Schema(
 );
 const prodctSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  image: { type: String, required: true },
-  brand: { type: String, required: true },
+  image: { type: String, required: false },
+  brand: { type: String, required: false },
   minprice: { type: Number, default: 0, required: true },
   maxprice: { type: Number, default: 0, required: true },
   addr: { type: String, default: '', required: true },
-  optionn: { type: Array, default: [], required: true },
+  optionn: { type: Array, default: [], required: false },
   currency: { type: String, default: 'KRW', required: true },
   category: { type: String, required: true },
   countInStock: { type: Number, default: 0, required: true },
