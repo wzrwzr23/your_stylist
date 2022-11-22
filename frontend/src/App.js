@@ -55,6 +55,10 @@ function App() {
               </li>
 
               <li>
+                  <Link to="/category/Cardigans">Cardigans</Link>
+              </li>              
+
+              <li>
                   <Link to="/category/PencilSkirt">Pencil Skirt </Link>
               </li>
 
@@ -83,12 +87,16 @@ function App() {
               </li>   
 
               <li>
-                  <Link to="/category/Budskirt">Bud skirt </Link>
+                  <Link to="/category/Sport">Sport </Link>
               </li>  
 
               <li>
                   <Link to="/category/BallGownskirt">Ball Gown skirt </Link>
               </li>  
+
+              <li>
+                  <Link to="/category/StraightJeans">StraightJeans</Link>
+              </li>                
               </>           
             /* <li>
               <Link>Women</Link>

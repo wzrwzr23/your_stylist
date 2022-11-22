@@ -15,6 +15,8 @@ import PencilSkirt from './data/Pencil Skirt';
 import Pleatedskirt from './data/Pleated skirt';
 import Rompers from './data/Rompers ';
 import StraightSkirt from './data/Straight Skirt';
+import Cardigans from './data/Cardigans ';
+import StraightJeans from './data/Straight Jeans';
 
 // const da = [{
 //   "name": "ZGCINE ZG-V160 V 마운트 배터리 V-잠금 리튬 배터리 유형-C USB 마이크로 포켓 배터리 카메라 스마트 폰 노트북",
@@ -121,8 +123,8 @@ function HomeScreen(props) {
     //   );
     // }
     // e.preventDefault();
-    const totaldata= [Budskirt,HalfSleeveDress,LongSleeveDress,PencilJeans,PencilSkirt,Pleatedskirt,Rompers,StraightSkirt]
-    const totaldataname= ["Budskirt","HalfSleeveDress","LongSleeveDress","PencilJeans","PencilSkirt","Pleatedskirt","Rompers","StraightSkirt"]
+    const totaldata= [Budskirt, StraightJeans, HalfSleeveDress,LongSleeveDress,PencilJeans,PencilSkirt,Pleatedskirt,Rompers,StraightSkirt]
+    const totaldataname= ["Sport","StraightJeans","HalfSleeveDress","LongSleeveDress","PencilJeans","PencilSkirt","Pleatedskirt","Rompers","StraightSkirt"]
 
     for (let c = 0;c<totaldata.length;c++){
 
