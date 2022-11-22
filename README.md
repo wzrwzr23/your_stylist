@@ -4,7 +4,7 @@ Welcome to Your Stylsit. Open your code editor and follow me to open this web ap
 
 ## Application slides
 
-👉 Slides : google drive link
+👉 Slides : https://docs.google.com/presentation/d/1Pp_oEId09DWg-FOX828Sk_cyjpXXGuHH/edit?usp=share_link&ouid=114821719729667593087&rtpof=true&sd=true
 
 ## Demo Video
 
