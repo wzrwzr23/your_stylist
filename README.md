@@ -1,27 +1,24 @@
-# React & Node Tutorial - Full ECommerce in 5 Hours [2020]
+# Your Stylist
 
-Welcome to my React and Node tutorial to build a fully-functional e-commerce website in 5 hours. Open your code editor and follow me for the next hours to build an e-commerce website using React and Node.JS.
+Welcome to Your Stylsit. Open your code editor and follow me to open this web application using npm. 
 
-## Demo Website
+## Application slides
 
-👉 Demo : https://oldamazona.webacademy.pro
+👉 Slides : google drive link
 
-## Video Tutorial
+## Demo Video
 
-👉 Click on this image to watch full 5-hours video of this tutorial
+👉 Click on this link to watch 5-minutes demo video of this application: google drive link
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Fy9SdZLBTOo/0.jpg)](https://www.youtube.com/watch?v=Fy9SdZLBTOo)
 
-## You Will Learn
 
-- HTML5 and CSS3: Semantic Elements, CSS Grid, Flexbox
-- React: Components, Props, Events, Hooks, Router, Axios
-- Redux: Store, Reducers, Actions
-- Node & Express: Web API, Body Parser, File Upload, JWT
-- MongoDB: Mongoose, Aggregation
-- Development: ESLint, Babel, Git, Github,
-- Deployment: Heroku
-- Watch React & Node Tutorial
+## Features
+
+- Search: Search items by inputting the keyword
+- Category: Display the items by different categories.
+- Sort: Sort search result by highest, newest, or lowest.
+- Wishlist: Add favorite items into the Wishlist.
+
 
 ## Run Locally
 
