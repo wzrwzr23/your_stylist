@@ -12,6 +12,10 @@ Welcome to Your Stylsit. Open your code editor and follow me to open this web ap
 
 
 
+## Prerequisite
+
+- The app uses mongodb ad the database. If you didn't install mongodb in your system, please install mongo first.
+
 ## Features
 
 - Search: Search items by inputting the keyword
@@ -50,6 +54,11 @@ $ npm start
 
 - If the terminal didn't open the web automatically, then: 
 - Open the link: http://localhost:3000/
+
+### 5. Upload items
+
+
+- If this is the first time you use Your Stylist, please click upload items button to add items to your database.
 
 
 
