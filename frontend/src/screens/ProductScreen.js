@@ -19,7 +19,7 @@ function ProductScreen(props) {
   const { userInfo } = userSignin;
   const productDetails = useSelector((state) => state.productDetails);
   const { product, loading, error } = productDetails;
-  // const options = product.option;
+
   const productReviewSave = useSelector((state) => state.productReviewSave);
   const { success: productSaveSuccess } = productReviewSave;
   const dispatch = useDispatch();
@@ -32,17 +32,9 @@ function ProductScreen(props) {
       dispatch({ type: PRODUCT_REVIEW_SAVE_RESET });
     }
     dispatch(detailsProduct(props.match.params.id));
-    // setOpp(product.option)
-    // await wait();
-    // while (loading | error){
-    //   console.log(1);
-    //   console.log(product.name);
-    // }
-    // console.log(2);
-    // console.log(product.name);
-    // console.log("success");
+
     return () => {
-      //
+      
     };
   }, [productSaveSuccess]);
 
@@ -51,7 +43,7 @@ function ProductScreen(props) {
   }
   const submitHandler = (e) => {
     e.preventDefault();
-    // dispatch actions
+ 
     dispatch(
       saveProductReview(props.match.params.id, {
         name: userInfo.name,
@@ -75,18 +67,10 @@ function ProductScreen(props) {
     }
   }
   const handleAddToCart = () => {
-    // console.log(product.optionn);
-    // product.option.map((item)=>{
-    //   console.log(item);
-    //   }
-    //
-    // )
+
     props.history.push('/wishlist/' + props.match.params.id + '?qty=' + 1);
   };
 
-  // const jump = () => {
-  //   window.location='http://www.baidu.com'
-  // }
 
 
 
@@ -130,51 +114,7 @@ function ProductScreen(props) {
                 </li>
               </ul>
             </div>
-            {/* <div className="details-action"> */}
-            {/*   /!* <div> *!/ */}
-            {/*   /!*   {product.option.map(item => <div>{item.name}</div>)} *!/ */}
-            {/*   /!* </div> *!/ */}
-            {/*   /!* <button onClick={handleAddToCart}>hhh</button> *!/ */}
-            {/*   <ul> */}
-
-            {/*     /!* {product.optionn.map(item => <div>{item.name}</div>)} *!/ */}
-            {/*     /!* <p>{product.optionn[0].name}</p> *!/ */}
-            {/*     <li>Price: {product.minprice}{product.currency} ~ {product.maxprice}{product.currency}</li> */}
-            {/*     <li>Currency: {product.currency}</li> */}
-            {/*     <li> */}
-            {/*       Status:{' '} */}
-            {/*       {product.countInStock > 0 ? 'In Stock' : 'Unavailable.'} */}
-            {/*     </li> */}
-            {/*     <li> */}
-            {/*       Qty:{' '} */}
-            {/*       <select */}
-            {/*         value={qty} */}
-            {/*         onChange={(e) => { */}
-            {/*           setQty(e.target.value); */}
-            {/*         }} */}
-            {/*       > */}
-            {/*         {[...Array(product.countInStock).keys()].map((x) => ( */}
-            {/*           <option key={x + 1} value={x + 1}> */}
-            {/*             {x + 1} */}
-            {/*           </option> */}
-            {/*         ))} */}
-
-
-            {/*       </select> */}
-            {/*     </li> */}
-            {/*     <li> */}
-            {/*       {product.countInStock > 0 && ( */}
-            {/*         <button */}
-            {/*           onClick={handleAddToCart} */}
-            {/*           className="button_a" */}
-            {/*         > */}
-            {/*           Add to wishlist */}
-            {/*         </button> */}
-            {/*       )} */}
-            {/*     </li> */}
-
-            {/*   </ul> */}
-            {/* </div> */}
+ 
           </div>
           <div>
             <button
@@ -192,11 +132,11 @@ function ProductScreen(props) {
                       return(
                         <div className='list-item'>
                           <p>Option: {item.name}</p>
-                          {/* <br></br> */}
+                       
                           <p>Price: {item.price}</p>
-                          {/* <br></br> */}
+                    
                           <p>Quantity: {item.quantity}</p>
-                          {/* <br></br> */}
+                     
                         </div>
                       )
                     })

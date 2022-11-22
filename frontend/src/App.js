@@ -35,11 +35,7 @@ function App() {
           </div>
           <div className="header-links">
             <Link to="/wishlist">Wishlist</Link>
-            {/* {userInfo ? ( */}
-            {/*   <Link to="/profile">{userInfo.name}</Link> */}
-            {/* ) : ( */}
-            {/*   <Link to="/signin">Sign In</Link> */}
-            {/* )} */}
+
 
           </div>
         </header>
@@ -93,37 +89,7 @@ function App() {
 
 
               </>
-            /* <li>
-              <Link>Women</Link>
-            </li>
 
-            <li>
-              <Link to="/category/Rompers">Rompers</Link>
-            </li>
-
-            <li>
-              <Link to="/category/PantsCapris">Pants & Capris</Link>
-            </li>
-
-            <li>
-              <Link>Dress</Link>
-            </li>
-
-            <li>
-              <Link to="/category/SleevelessDress">---- Sleeveless Dress</Link>
-            </li>
-
-            <li>
-              <Link to="/category/Long-SleeveDress">---- Long-Sleeve Dress</Link>
-            </li>
-
-            <li>
-              <Link to="/category/Short-SleeveDress">---- Short-Sleeve Dress</Link>
-            </li>
-
-            <li>
-              <Link to="/category/Shirts">Shirts</Link>
-            </li> */
             }
           </ul>
         </aside>

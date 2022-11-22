@@ -19,7 +19,7 @@ function RegisterScreen(props) {
       props.history.push(redirect);
     }
     return () => {
-      //
+      
     };
   }, [userInfo]);
 

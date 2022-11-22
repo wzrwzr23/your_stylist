@@ -33,9 +33,7 @@ function CartScreen(props) {
           <h3>
             Wishlist
           </h3>
-          {/* <div> */}
-          {/*   Price */}
-          {/* </div> */}
+
         </li>
         {
           cartItems.length === 0 ?
@@ -55,20 +53,10 @@ function CartScreen(props) {
                     </Link>
 
                   </div>
-                  {/* <div> */}
-                  {/*   Qty: */}
-                  {/* <select value={item.qty} onChange={(e) => dispatch(addToCart(item.product, e.target.value))}> */}
-                  {/*     {[...Array(item.countInStock).keys()].map(x => */}
-                  {/*       <option key={x + 1} value={x + 1}>{x + 1}</option> */}
-                  {/*     )} */}
-                  {/*   </select> */}
-                  {/*   <button type="button" className="delete" onClick={() => removeFromCartHandler(item.product)} > */}
-                  {/*     Delete */}
-                  {/*   </button> */}
-                  {/* </div> */}
+
                 </div>
                 <div className="cart-price">
-                  {/* ${item.minprice} */}
+                  {}
                   <button type="button" className="delete" onClick={() => removeFromCartHandler(item.product)} >
                     Delete
                   </button>
@@ -79,17 +67,7 @@ function CartScreen(props) {
       </ul>
 
     </div>
-    {/* <div className="cart-action"> */}
-    {/*   <h3> */}
-    {/*     Subtotal ( {cartItems.reduce((a, c) => a + c.qty, 0)} items) */}
-    {/*     : */}
-    {/*      $ {cartItems.reduce((a, c) => a + c.price * c.qty, 0)} */}
-    {/*   </h3> */}
-    {/*   <button onClick={checkoutHandler} className="button primary full-width" disabled={cartItems.length === 0}> */}
-    {/*     Proceed to Checkout */}
-    {/*   </button> */}
 
-    {/* </div> */}
 
   </div>
 }
