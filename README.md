@@ -1,6 +1,7 @@
 # Your Stylist
 
-Welcome to Your Stylsit. Open your code editor and follow me to open this web application using npm. 
+Welcome to Your Stylsit. Open your code editor and follow me to open this web application using npm.
+We use GMS API to get product info, and then upload the information to mongodb.
 
 ## Application slides
 
