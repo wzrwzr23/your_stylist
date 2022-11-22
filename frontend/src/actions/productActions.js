@@ -42,14 +42,10 @@ const listProducts = (
 const saveProduct = (product) => async (dispatch, getState) => {
   try {
     dispatch({ type: PRODUCT_SAVE_REQUEST, payload: product });
-    // const {
-    //   userSignin: { userInfo },
-    // } = getState();
+
     if (!product._id) {
       const { data } = await Axios.post('/api/products', product, {
-        // headers: {
-        //   Authorization: 'Bearer ' + userInfo.token,
-        // },
+
       });
       dispatch({ type: PRODUCT_SAVE_SUCCESS, payload: data });
     } else {
@@ -58,7 +54,7 @@ const saveProduct = (product) => async (dispatch, getState) => {
         product,
         {
           headers: {
-            // Authorization: 'Bearer ' + userInfo.token,
+
           },
         }
       );
@@ -81,13 +77,11 @@ const detailsProduct = (productId) => async (dispatch) => {
 
 const deleteProdcut = (productId) => async (dispatch, getState) => {
   try {
-    // const {
-    //   userSignin: { userInfo },
-    // } = getState();
+
     dispatch({ type: PRODUCT_DELETE_REQUEST, payload: productId });
     const { data } = await axios.delete('/api/products/' + productId, {
       headers: {
-        // Authorization: 'Bearer ' + userInfo.token,
+
       },
     });
     dispatch({ type: PRODUCT_DELETE_SUCCESS, payload: data, success: true });
@@ -98,24 +92,20 @@ const deleteProdcut = (productId) => async (dispatch, getState) => {
 
 const saveProductReview = (productId, review) => async (dispatch, getState) => {
   try {
-    // const {
-    //   userSignin: {
-    //     userInfo: { token },
-    //   },
-    // } = getState();
+
     dispatch({ type: PRODUCT_REVIEW_SAVE_REQUEST, payload: review });
     const { data } = await axios.post(
       `/api/products/${productId}/reviews`,
       review,
       {
         headers: {
-          // Authorization: 'Bearer ' + token,
+         
         },
       }
     );
     dispatch({ type: PRODUCT_REVIEW_SAVE_SUCCESS, payload: data });
   } catch (error) {
-    // report error
+  
     dispatch({ type: PRODUCT_REVIEW_SAVE_FAIL, payload: error.message });
   }
 };
