@@ -15,8 +15,6 @@ import Skirt from "./data/Skirt";
 import Jeans from "./data/Jeans";
 import Jump from "./data/Jump";
 
-
-
 function HomeScreen(props) {
   const [searchKeyword, setSearchKeyword] = useState('');
   const [id, setId] = useState('');
@@ -44,10 +42,8 @@ function HomeScreen(props) {
   };
   const upload = () => {
 
-
     const totaldata = [SleevelessDress, PantsCapris, Rompers, Tshirt,Blouse,Cardigans,Hoodies,Skirt,Jeans,Jump]
     const totaldataname = ['SleevelessDress', 'PantsCapris', 'Rompers', 'Tshirt','Blouse','Cardigans','Hoodies','Skirt','Jeans','Jump']
-        
 
     for (let c = 0;c<totaldata.length;c++){
 
@@ -101,7 +97,7 @@ function HomeScreen(props) {
               onChange={(e) => setSearchKeyword(e.target.value)}
             />
             <button type="submit">Search</button>
-            <button onClick = {upload}>Upload Products</button>
+
           </form>
         </li>
         <li>
@@ -111,6 +107,9 @@ function HomeScreen(props) {
             <option value="lowest">Lowest</option>
             <option value="highest">Highest</option>
           </select>
+        </li>
+        <li>
+          <button onClick = {upload}>Upload Products</button>
         </li>
       </ul>
       {loading ? (
