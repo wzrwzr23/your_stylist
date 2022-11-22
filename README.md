@@ -8,7 +8,7 @@ Welcome to Your Stylsit. Open your code editor and follow me to open this web ap
 
 ## Demo Video
 
-👉 Click on this link to watch 5-minutes demo video of this application: google drive link
+👉 Click on this link to watch 4-minutes demo video of this application: https://drive.google.com/file/d/1xBuMonZNkB5J3Qo2XYCPeBK4rr6YEgIg/view?usp=share_link
 
 
 
