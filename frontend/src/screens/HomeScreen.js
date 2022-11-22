@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import axios from 'axios';
+
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts, saveProduct } from '../actions/productActions';
 
@@ -47,7 +47,7 @@ function HomeScreen(props) {
 
     const totaldata = [SleevelessDress, PantsCapris, Rompers, Tshirt,Blouse,Cardigans,Hoodies,Skirt,Jeans,Jump]
     const totaldataname = ['SleevelessDress', 'PantsCapris', 'Rompers', 'Tshirt','Blouse','Cardigans','Hoodies','Skirt','Jeans','Jump']
-
+        
 
     for (let c = 0;c<totaldata.length;c++){
 

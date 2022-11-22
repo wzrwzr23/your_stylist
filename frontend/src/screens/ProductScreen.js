@@ -2,21 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailsProduct, saveProductReview } from '../actions/productActions';
-// import Rating from '../components/Rating';
+
 import { PRODUCT_REVIEW_SAVE_RESET } from '../constants/productConstants';
 import "./screen.css"
 
 function ProductScreen(props) {
-  // const [qty, setQty] = useState(1);
+
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState('');
 
   const [opp, setOpp] = useState();
-  // const [oppnull, setOppnull] = useState(false);
+
   const [str, setStr] = useState("");
 
-  // const userSignin = useSelector((state) => state.userSignin);
-  // const { userInfo } = userSignin;
+
   const productDetails = useSelector((state) => state.productDetails);
   const { product, loading, error } = productDetails;
 
@@ -41,17 +40,7 @@ function ProductScreen(props) {
   const wait = async () => {
     setOpp(product.optionn);
   }
-  // const submitHandler = (e) => {
-  //   e.preventDefault();
-  //
-  //   dispatch(
-  //     saveProductReview(props.match.params.id, {
-  //       name: userInfo.name,
-  //       rating: rating,
-  //       comment: comment,
-  //     })
-  //   );
-  // };
+
   const show = ()=>{
     console.log(product.optionn);
     console.log(1);
@@ -94,14 +83,7 @@ function ProductScreen(props) {
                 <li>
                   <h4>{product.name}</h4>
                 </li>
-                {/* <li> */}
-                {/*   <a href="#reviews"> */}
-                {/*     <Rating */}
-                {/*       value={product.rating} */}
-                {/*       text={product.numReviews + ' reviews'} */}
-                {/*     /> */}
-                {/*   </a> */}
-                {/* </li> */}
+
                 <li>
                   Price: <b>{product.minprice}{product.currency} ~ {product.maxprice}{product.currency}</b>
                 </li>
