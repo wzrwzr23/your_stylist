@@ -21,7 +21,7 @@ function ProductsScreen(props) {
   const [brand, setBrand] = useState('');
   const [category, setCategory] = useState('');
   const [countInStock, setCountInStock] = useState('');
-  // const [option, setOption] = useState('');
+
 
   const [description, setDescription] = useState('');
   const [uploading, setUploading] = useState(false);
@@ -49,7 +49,7 @@ function ProductsScreen(props) {
     }
     dispatch(listProducts());
     return () => {
-      //
+      
     };
   }, [successSave, successDelete]);
 
@@ -69,24 +69,7 @@ function ProductsScreen(props) {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    // dispatch(
-    //   saveProduct({
-    //     _id: id,
-    //     name: "name6",
-    //     minprice: 3,
-    //     maxprice: 5,
-    //     image,
-    //     brand: "NO",
-    //     category:'PantsCapris',
-    //     countInStock:2,
-    //     description:"eee",
-    //     currency: "KRW",
-    //     optionn: [],
-    //     addr: "",
-    //   })
-    // );
 
-    // e.preventDefault();
     for (let i=0;i<data.length;i++){
       let d = data[i];
       let des = "";
