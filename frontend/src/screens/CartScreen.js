@@ -31,7 +31,7 @@ function CartScreen(props) {
       <ul className="cart-list-container">
         <li>
           <h3>
-            Shopping Cart
+            Wishlist
           </h3>
           {/* <div> */}
           {/*   Price */}
@@ -40,7 +40,7 @@ function CartScreen(props) {
         {
           cartItems.length === 0 ?
             <div>
-              Cart is empty
+              Wishlist is empty
           </div>
             :
             cartItems.map(item =>

@@ -81,7 +81,7 @@ function ProductScreen(props) {
     //   }
     //
     // )
-    props.history.push('/cart/' + props.match.params.id + '?qty=' + 1);
+    props.history.push('/wishlist/' + props.match.params.id + '?qty=' + 1);
   };
 
   // const jump = () => {

@@ -34,7 +34,7 @@ function App() {
             <Link to="/">Your Stylist</Link>
           </div>
           <div className="header-links">
-            <a href="cart.html">Wishlist</a>
+            <Link to="/wishlist">Wishlist</Link>
             {/* {userInfo ? ( */}
             {/*   <Link to="/profile">{userInfo.name}</Link> */}
             {/* ) : ( */}
@@ -50,46 +50,49 @@ function App() {
           </button>
           <ul className="categories">
             {
-            <><li>
-                <Link to="/category/PencilJeans">Pencil Jeans</Link>
+            <>
+              <li>
+                <Link to="/category/Blouse">Blouse</Link>
               </li>
 
               <li>
-                  <Link to="/category/PencilSkirt">Pencil Skirt </Link>
+                <Link to="/category/Cardigans">Cardigans</Link>
               </li>
 
               <li>
-                  <Link to="/category/Asymmetricalskirt">Asymmetrical skirt </Link>
+                <Link to="/category/Hoodies">Hoodies & Sweatshirts</Link>
               </li>
 
               <li>
-                  <Link to="/category/StraightSkirt">Straight Skirt </Link>
-              </li>    
+                <Link to="/category/Jeans">Jeans</Link>
+              </li>
 
               <li>
-                  <Link to="/category/Rompers">Rompers </Link>
-              </li>    
+                <Link to="/category/Jump">Jumpsuits</Link>
+              </li>
 
               <li>
-                  <Link to="/category/Pleatedskirt">Pleated skirt </Link>
-              </li> 
+                <Link to="/category/PantsCapris">Pants & Capris</Link>
+              </li>
 
               <li>
-                  <Link to="/category/Long-SleeveDress">Long-Sleeve Dress </Link>
-              </li>               
+                <Link to="/category/Rompers">Rompers </Link>
+              </li>
 
               <li>
-                  <Link to="/category/Half-SleeveDress">Half-Sleeve Dress </Link>
-              </li>   
+                <Link to="/category/Skirt">Skirt</Link>
+              </li>
 
               <li>
-                  <Link to="/category/Budskirt">Bud skirt </Link>
-              </li>  
+                  <Link to="/category/SleevelessDress">Sleeveless Dress</Link>
+              </li>
 
               <li>
-                  <Link to="/category/BallGownskirt">Ball Gown skirt </Link>
-              </li>  
-              </>           
+                <Link to="/category/Tshirt">T-shirt</Link>
+              </li>
+
+
+              </>
             /* <li>
               <Link>Women</Link>
             </li>
@@ -136,7 +139,7 @@ function App() {
             <Route path="/signin" component={SigninScreen} />
             <Route path="/register" component={RegisterScreen} />
             <Route path="/product/:id" component={ProductScreen} />
-            <Route path="/cart/:id?" component={CartScreen} />
+            <Route path="/wishlist/:id?" component={CartScreen} />
             <Route path="/category/:id" component={HomeScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
           </div>
