@@ -10,8 +10,6 @@ Welcome to Your Stylsit. Open your code editor and follow me to open this web ap
 
 👉 Click on this link to watch 4-minutes demo video of this application: https://drive.google.com/file/d/1xBuMonZNkB5J3Qo2XYCPeBK4rr6YEgIg/view?usp=share_link
 
-
-
 ## Prerequisite
 
 - The app uses mongodb ad the database. If you didn't install mongodb in your system, please install mongo first.
@@ -58,7 +56,7 @@ $ npm start
 ### 5. Upload items
 
 
-- If this is the first time you use Your Stylist, please click upload items button to add items to your database.
+- If this is the first time you use Your Stylist, please click `Upload Procts` button to add items to your MongoDB database.
 
 
 
