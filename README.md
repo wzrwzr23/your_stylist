@@ -45,6 +45,12 @@ $ cd frontend
 $ npm install
 $ npm start
 ```
+### 4. Open Website
+
+```
+# If the terminal didn't open the web automatically, then: 
+# Open the link: http://localhost:3000/
+```
 
 
 
