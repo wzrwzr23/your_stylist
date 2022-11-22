@@ -6,18 +6,18 @@ import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
 import SigninScreen from './screens/SigninScreen';
 import { useSelector } from 'react-redux';
-import RegisterScreen from './screens/RegisterScreen';
+// import RegisterScreen from './screens/RegisterScreen';
 import ProductsScreen from './screens/ProductsScreen';
-import ShippingScreen from './screens/ShippingScreen';
-import PaymentScreen from './screens/PaymentScreen';
-import PlaceOrderScreen from './screens/PlaceOrderScreen';
-import OrderScreen from './screens/OrderScreen';
-import ProfileScreen from './screens/ProfileScreen';
-import OrdersScreen from './screens/OrdersScreen';
+// import ShippingScreen from './screens/ShippingScreen';
+// import PaymentScreen from './screens/PaymentScreen';
+// import PlaceOrderScreen from './screens/PlaceOrderScreen';
+// import OrderScreen from './screens/OrderScreen';
+// import ProfileScreen from './screens/ProfileScreen';
+// import OrdersScreen from './screens/OrdersScreen';
 
 function App() {
-  const userSignin = useSelector((state) => state.userSignin);
-  const { userInfo } = userSignin;
+  // const userSignin = useSelector((state) => state.userSignin);
+  // const { userInfo } = userSignin;
 
   const openMenu = () => {
     document.querySelector('.sidebar').classList.add('open');
@@ -95,15 +95,15 @@ function App() {
         </aside>
         <main className="main">
           <div className="content">
-            <Route path="/orders" component={OrdersScreen} />
-            <Route path="/profile" component={ProfileScreen} />
-            <Route path="/order/:id" component={OrderScreen} />
-            <Route path="/products" component={ProductsScreen} />
-            <Route path="/shipping" component={ShippingScreen} />
-            <Route path="/payment" component={PaymentScreen} />
-            <Route path="/placeorder" component={PlaceOrderScreen} />
-            <Route path="/signin" component={SigninScreen} />
-            <Route path="/register" component={RegisterScreen} />
+            {/* <Route path="/orders" component={OrdersScreen} /> */}
+            {/* <Route path="/profile" component={ProfileScreen} /> */}
+            {/* <Route path="/order/:id" component={OrderScreen} /> */}
+            {/* <Route path="/products" component={ProductsScreen} /> */}
+            {/* <Route path="/shipping" component={ShippingScreen} /> */}
+            {/* <Route path="/payment" component={PaymentScreen} /> */}
+            {/* <Route path="/placeorder" component={PlaceOrderScreen} /> */}
+            {/* <Route path="/signin" component={SigninScreen} /> */}
+            {/* <Route path="/register" component={RegisterScreen} /> */}
             <Route path="/product/:id" component={ProductScreen} />
             <Route path="/wishlist/:id?" component={CartScreen} />
             <Route path="/category/:id" component={HomeScreen} />

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts, saveProduct } from '../actions/productActions';
-
-
 
 import Rompers from './data/Rompers';
 import SleevelessDress from "./data/SleevelessDress"
@@ -28,11 +26,11 @@ function HomeScreen(props) {
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
   useEffect(() => {
-   
+
     dispatch(listProducts(category));
 
     return () => {
-      
+
     };
   }, [category]);
 
@@ -46,7 +44,7 @@ function HomeScreen(props) {
   };
   const upload = () => {
 
- 
+
     const totaldata = [SleevelessDress, PantsCapris, Rompers, Tshirt,Blouse,Cardigans,Hoodies,Skirt,Jeans,Jump]
     const totaldataname = ['SleevelessDress', 'PantsCapris', 'Rompers', 'Tshirt','Blouse','Cardigans','Hoodies','Skirt','Jeans','Jump']
 
@@ -87,7 +85,7 @@ function HomeScreen(props) {
           })
         );
       }
-      
+
     };
   }
 
@@ -134,9 +132,9 @@ function HomeScreen(props) {
                 <div className="product-name">
                   <Link to={'/product/' + product._id}>{product.name}</Link>
                 </div>
-            
+
                 <div className="product-price">From {product.minprice}{product.currency}</div>
-     
+
               </div>
             </li>
           ))}
