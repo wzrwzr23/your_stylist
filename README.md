@@ -47,10 +47,10 @@ $ npm start
 ```
 ### 4. Open Website
 
-```
-# If the terminal didn't open the web automatically, then: 
-# Open the link: http://localhost:3000/
-```
+
+- If the terminal didn't open the web automatically, then: 
+- Open the link: http://localhost:3000/
+
 
 
 
